@@ -1,7 +1,7 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
-import List from "./List";
+import React, { useState } from "react";
+import { VirtualizedList } from "@Anjan17/react-virtualized";
 
-const VirtualizedList = () => {
+const VirtualizedListExample = () => {
   const [items, setItems] = useState(
     Array(1000)
       .map((val, idx) => idx)
@@ -10,7 +10,7 @@ const VirtualizedList = () => {
   const [startAndEnd, setStartAndEnd] = useState([0, 0]);
 
   return (
-    <List
+    <VirtualizedList
       itemHeight={40}
       totalItems={items?.length}
       listHeight={300}
@@ -30,8 +30,8 @@ const VirtualizedList = () => {
             }}
           >{`Row ${idx + startAndEnd[0]}`}</div>
         ))}
-    </List>
+    </VirtualizedList>
   );
 };
 
-export default VirtualizedList;
+export default VirtualizedListExample;
