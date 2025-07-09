@@ -1,9 +1,9 @@
 import "./styles.css";
-import VirtualizedList from "./VirtualizedList";
+import VirtualizedListExample from "./VirtualizedListExample";
 export default function App() {
   return (
     <div className="App">
-      <VirtualizedList />
+      <VirtualizedListExample />
     </div>
   );
 }
